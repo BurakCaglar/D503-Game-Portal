@@ -248,4 +248,9 @@ img {
 .main-slider .single-slide .slide-overlay p {
   font-size: 1.4rem;
 }
+
+/*** CUSTOM OWL CAROUSEL ***/
+.owl-theme {
+  position: relative;
+}
 /*# sourceMappingURL=style.css.map */
