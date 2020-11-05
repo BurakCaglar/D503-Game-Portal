@@ -95,7 +95,7 @@ img {
 
             a {
                 font-size: 2rem;
-                transform: all .5s;
+                transform: $general-transition;
             }
 
             &:hover a {
@@ -123,7 +123,7 @@ img {
             li {
                 line-height: 8rem;
                 position: relative;
-                transition: all .5s;
+                transition: $general-transition;
                 
                 .dropdown {
                     position: absolute;
@@ -131,7 +131,7 @@ img {
                     width: 150%;
                     left: 50%;
                     top: 12rem;
-                    transition: all .5s;
+                    transition: $general-transition;
                     opacity: 0;
                     visibility: hidden;
 
@@ -236,7 +236,7 @@ img {
             text-align: center;
             border-radius: 4rem;
             background-color: transparent;
-            transition: all .5s;
+            transition: $general-transition;
 
             &.active, &:hover {
                 color: $primary-color;
@@ -299,9 +299,32 @@ img {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-row-gap: 4rem;
-        grid-column-gap: 8rem;
+        grid-column-gap: 4rem;
         grid-template-areas: 'item-1 item-1 item-1 item-2'
                              'item-3 item-4 item-5 item-6';
+
+        .recent-game-featured {
+            @include flex-display(flex, center, space-between);
+
+            .recent-game-thumbnail {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .rating {
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                font-size: 2rem;
+            }
+
+            .game-title {
+                font-size: 3rem !important;
+            }
+        }
 
         .recent-game {
             width: 100%;
@@ -314,7 +337,7 @@ img {
 
                 img {
                     width: 100%;
-                    transition: all .5s;
+                    transition: $general-transition;
                 }
 
                 &::after {
@@ -327,7 +350,7 @@ img {
                     height: 100%;
                     visibility: hidden;
                     opacity: 0;
-                    transition: all .5s;
+                    transition: $general-transition;
                 }
             }
 
@@ -340,12 +363,12 @@ img {
 
                     img {
                         transform: scale(1.1) rotate(5deg);
-                        transition: all .5s;
+                        transition: $general-transition;
                     }
 
                     .rating {
                         opacity: 1;
-                        transition: all .5s;
+                        transition: $general-transition;
                     }
                 }
                 
@@ -356,9 +379,11 @@ img {
 
                 .game-title {
                     margin-bottom: 2rem;
+                    font-size: 1.8rem;
+                    letter-spacing: 0;
 
                     a {
-                        transition: all .5s;
+                        transition: $general-transition;
 
                         &:hover {
                             color: darken($light-color, 30%);
@@ -369,11 +394,11 @@ img {
                 .game-meta {
                     @include flex-display (flex, center, space-between);
                     font-size: 1.6rem;
-                    
+
                     .game-date {
                         color: $date-color;
-                        font-size: 1.6rem;
-                        transition: all .5s;
+                        font-size: 1.2rem;
+                        transition: $general-transition;
 
                         &:hover {
                             color: darken($date-color, 30%);
